@@ -19,8 +19,10 @@ patch -b vmnet-only/bridge.c < bridge.c.patch
 #> atomic_inc((atomic_t*)&clone->users);
 
 cd vmmon-only/
+make clean
 make
 cd ../vmnet-only/
+make clean
 make
 cd ..
 KERNEL_RELEASE=$(uname -r)
