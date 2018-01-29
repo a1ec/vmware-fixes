@@ -1,0 +1,11 @@
+--- bridge.c.orig	2018-01-11 20:09:05.552867018 +1100
++++ bridge.c	2018-01-11 20:11:01.203846373 +1100
+@@ -636,7 +636,7 @@
+ 	 unsigned long flags;
+ 	 int i;
+ 
+-	 atomic_inc(&clone->users);
++	 atomic_inc((atomic_t*)&clone->users);
+ 
+ 	 clone->dev = dev;
+ 	 clone->protocol = eth_type_trans(clone, dev);

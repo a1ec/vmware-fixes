@@ -1,0 +1,6 @@
+A bunch of scripts to fix issues encountered with VMWare Workstation on Linux (Ubuntu).
+May need modification to suit your purposes.
+
+- Workaround for "GNU C Compiler not found" issue.
+./recompile-modules.bash
+./run-vmware.bash
